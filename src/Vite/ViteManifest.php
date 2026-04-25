@@ -10,6 +10,9 @@ use Symfony\Component\Filesystem\Path;
 
 class ViteManifest
 {
+    /**
+     * @param array<string, array<string, mixed>> $configs
+     */
     public function __construct(
         #[Autowire(service: 'pentatrion_vite.file_accessor')]
         private readonly FileAccessor $fileAccessor,
@@ -49,6 +52,9 @@ class ViteManifest
         return $this->configs[$this->configName]['base'] ?? '/';
     }
 
+    /**
+     * @return array<string, mixed>|null
+     */
     private function entry(string $sourcePath): ?array
     {
         try {

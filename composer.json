@@ -19,5 +19,18 @@
     },
     "extra": {
         "contao-manager-plugin": "BohnMedia\\ViteContaoBundle\\ContaoManager\\Plugin"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "*",
+        "phpstan/extension-installer": "*",
+        "phpstan/phpstan-symfony": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "contao/manager-plugin": true,
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true
+        }
     }
 }

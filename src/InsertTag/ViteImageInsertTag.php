@@ -32,42 +32,25 @@ class ViteImageInsertTag
     #[AsInsertTag('vite_image')]
     public function __invoke(ResolvedInsertTag $insertTag): InsertTagResult
     {
-        $raw = (string) $insertTag->getParameters()->get(0);
-        $source = $raw;
-        $alt = '';
-        $class = '';
-        $template = 'picture_default';
-        $size = null;
+        $raw = StringUtil::decodeEntities((string)$insertTag->getParameters()->get(0));
+        $parts = parse_url($raw);
+        $source = $parts['path'] ?? $raw;
+        $params = [];
 
-        if (str_contains($raw, '?')) {
-            [$source, $query] = explode('?', $raw, 2);
-
-            foreach (explode('&', StringUtil::decodeEntities($query)) as $pair) {
-                if (!str_contains($pair, '=')) {
-                    continue;
-                }
-
-                [$key, $value] = explode('=', urldecode($pair), 2);
-
-                switch ($key) {
-                    case 'alt':
-                        $alt = $value;
-                        break;
-
-                    case 'class':
-                        $class = $value;
-                        break;
-
-                    case 'template':
-                        $template = preg_replace('/[^a-z0-9_]/i', '', $value) ?: $template;
-                        break;
-
-                    case 'size':
-                        $size = is_numeric($value) ? (int) $value : $value;
-                        break;
-                }
-            }
+        if (isset($parts['query'])) {
+            parse_str($parts['query'], $params);
         }
+
+        $alt = is_string($params['alt'] ?? null) ? $params['alt'] : '';
+        $class = is_string($params['class'] ?? null) ? $params['class'] : '';
+        $template = is_string($params['template'] ?? null)
+            ? (string) preg_replace('/[^a-z0-9_]/i', '', $params['template'])
+            : 'picture_default';
+        $size = match (true) {
+            !is_string($params['size'] ?? null) => null,
+            is_numeric($params['size']) => (int) $params['size'],
+            default => $params['size'],
+        };
 
         $path = $this->manifest->resolveFilesystemPath($source);
 
