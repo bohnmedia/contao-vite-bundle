@@ -4,6 +4,6 @@ services:
         autoconfigure: true
         public: false
 
-    BohnMedia\ViteContaoBundle\:
+    BohnMedia\ContaoViteBundle\:
         resource: '../src/*'
-        exclude: '../src/{BohnMediaViteContaoBundle.php,ContaoManager,DependencyInjection}'
+        exclude: '../src/{BohnMediaContaoViteBundle.php,ContaoManager,DependencyInjection}'

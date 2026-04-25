@@ -1,4 +1,4 @@
-# Vite Contao Bundle
+# Contao Vite Bundle
 
 Contao 5 insert tags that resolve Vite-hashed assets via `manifest.json` and
 render them through Contao's image pipeline. The result is a plain `<img>` for
@@ -11,7 +11,7 @@ This bundle depends on [pentatrion/vite-bundle][pentatrion] and forwards its
 ## Installation
 
 ```bash
-composer require bohn-media/vite-contao-bundle
+composer require bohn-media/contao-vite-bundle
 ```
 
 The bundle's Contao Manager Plugin registers `PentatrionViteBundle`
@@ -22,7 +22,7 @@ automatically.
 Set the Vite output folder below `public/` in `config/config.yaml`:
 
 ```yaml
-bohn_media_vite_contao:
+bohn_media_contao_vite:
   build_directory: vite
 ```
 

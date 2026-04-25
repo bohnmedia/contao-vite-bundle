@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BohnMedia\ViteContaoBundle\ContaoManager;
+namespace BohnMedia\ContaoViteBundle\ContaoManager;
 
-use BohnMedia\ViteContaoBundle\BohnMediaViteContaoBundle;
+use BohnMedia\ContaoViteBundle\BohnMediaContaoViteBundle;
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
@@ -18,7 +18,7 @@ class Plugin implements BundlePluginInterface
         return [
             BundleConfig::create(PentatrionViteBundle::class)
                 ->setLoadAfter([ContaoCoreBundle::class]),
-            BundleConfig::create(BohnMediaViteContaoBundle::class)
+            BundleConfig::create(BohnMediaContaoViteBundle::class)
                 ->setLoadAfter([PentatrionViteBundle::class]),
         ];
     }

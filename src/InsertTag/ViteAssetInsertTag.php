@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BohnMedia\ViteContaoBundle\InsertTag;
+namespace BohnMedia\ContaoViteBundle\InsertTag;
 
-use BohnMedia\ViteContaoBundle\Vite\ViteManifest;
+use BohnMedia\ContaoViteBundle\Vite\ViteManifest;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsInsertTag;
 use Contao\CoreBundle\InsertTag\InsertTagResult;
 use Contao\CoreBundle\InsertTag\OutputType;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BohnMedia\ViteContaoBundle\Vite;
+namespace BohnMedia\ContaoViteBundle\Vite;
 
 use Pentatrion\ViteBundle\Service\FileAccessor;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;

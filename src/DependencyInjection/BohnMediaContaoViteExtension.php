@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BohnMedia\ViteContaoBundle\DependencyInjection;
+namespace BohnMedia\ContaoViteBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-class BohnMediaViteContaoExtension extends Extension implements PrependExtensionInterface
+class BohnMediaContaoViteExtension extends Extension implements PrependExtensionInterface
 {
     public function load(array $configs, ContainerBuilder $container): void
     {

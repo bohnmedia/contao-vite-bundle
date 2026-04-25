@@ -1,5 +1,5 @@
 {
-    "name": "bohn-media/vite-contao-bundle",
+    "name": "bohn-media/contao-vite-bundle",
     "description": "Contao Insert Tags that resolve Vite-hashed assets and render Contao responsive pictures.",
     "type": "contao-bundle",
     "license": "MIT",
@@ -14,11 +14,11 @@
     },
     "autoload": {
         "psr-4": {
-            "BohnMedia\\ViteContaoBundle\\": "src/"
+            "BohnMedia\\ContaoViteBundle\\": "src/"
         }
     },
     "extra": {
-        "contao-manager-plugin": "BohnMedia\\ViteContaoBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "BohnMedia\\ContaoViteBundle\\ContaoManager\\Plugin"
     },
     "require-dev": {
         "phpstan/phpstan": "*",
