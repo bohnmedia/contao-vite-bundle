@@ -2,4 +2,3 @@
 /composer.lock
 .idea/
 .vscode/
-.phpunit.result.cache

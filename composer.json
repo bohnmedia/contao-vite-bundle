@@ -1,6 +1,6 @@
 {
     "name": "bohn-media/contao-vite-bundle",
-    "description": "Contao Insert Tags that resolve Vite-hashed assets and render Contao responsive pictures.",
+    "description": "Contao 5 wrapper around pentatrion/vite-bundle. Registers the upstream bundle in Contao Manager Edition so its Twig functions are available out of the box.",
     "type": "contao-bundle",
     "license": "MIT",
     "require": {
@@ -8,8 +8,6 @@
         "contao/core-bundle": "^5.0",
         "contao/manager-plugin": "^2.0",
         "pentatrion/vite-bundle": "^8.0",
-        "symfony/dependency-injection": "^6.4 || ^7.0",
-        "symfony/filesystem": "^6.4 || ^7.0",
         "symfony/http-kernel": "^6.4 || ^7.0"
     },
     "autoload": {
