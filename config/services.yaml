@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    BohnMedia\ViteContaoBundle\:
+        resource: '../src/*'
+        exclude: '../src/{BohnMediaViteContaoBundle.php,ContaoManager,DependencyInjection}'
