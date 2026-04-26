@@ -11,9 +11,7 @@ composer require bohn-media/contao-vite-bundle
 ```
 
 The bundle expects Vite to output its build artifacts into `public/build/`
-(the default). Make sure your `vite.config.js` keeps `base: "/build/"` and
-`build.outDir: "public/build"` in sync, otherwise asset URLs and the dev
-proxy route will not resolve.
+(the default).
 
 ## Usage in templates
 
