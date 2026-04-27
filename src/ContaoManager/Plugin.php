@@ -12,6 +12,7 @@ use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use Contao\ManagerPlugin\Config\ContainerBuilder;
 use Contao\ManagerPlugin\Config\ExtensionPluginInterface;
 use Contao\ManagerPlugin\Routing\RoutingPluginInterface;
+use Exception;
 use Pentatrion\ViteBundle\PentatrionViteBundle;
 use Symfony\Component\Config\Loader\LoaderResolverInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -30,6 +31,9 @@ class Plugin implements BundlePluginInterface, RoutingPluginInterface, Extension
         ];
     }
 
+    /**
+     * @throws Exception
+     */
     public function getRouteCollection(LoaderResolverInterface $resolver, KernelInterface $kernel): ?RouteCollection
     {
         if ('dev' !== $kernel->getEnvironment()) {
