@@ -1,17 +1,26 @@
 # Contao Vite Bundle
 
 A small Contao 5 wrapper around [pentatrion/vite-bundle][pentatrion]. It
-registers `PentatrionViteBundle` in Contao Manager Edition and exposes the
-most common rendering helpers as Contao insert tags.
+registers `PentatrionViteBundle` in Contao Manager Edition so its Twig
+functions work out of the box, and additionally exposes the most common
+rendering helpers as Contao insert tags for use outside of templates.
 
 ## Installation
 
 ```bash
-composer require bohn-media/contao-vite-bundle
+composer require bohnmedia/contao-vite-bundle
 ```
 
-The bundle expects Vite to output its build artifacts into `public/build/`
-(the default).
+By default the bundle expects Vite to output its build artifacts into
+`public/build/`. Both parts of that path can be overridden through the
+underlying `pentatrion_vite` configuration:
+
+```yaml
+# config/config.yaml
+pentatrion_vite:
+    public_directory: public   # default: public
+    build_directory: build     # default: build
+```
 
 ## Rendering entry tags
 
