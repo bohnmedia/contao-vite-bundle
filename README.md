@@ -22,6 +22,9 @@ pentatrion_vite:
     build_directory: build     # default: build
 ```
 
+See the [pentatrion/vite-bundle reference][reference] for all available
+configuration options.
+
 ## Rendering entry tags
 
 Render the link and script tags for a Vite entry.
@@ -40,9 +43,9 @@ Render the link and script tags for a Vite entry.
 {{vite_entry_script_tags::app}}
 ```
 
-If the entry name is missing or rendering fails (e.g. unknown entry,
-broken `entrypoints.json`), the insert tags render as an empty string and
-log an error instead of throwing.
+The insert tags behave like the Twig functions they wrap: an unknown
+entry resolves to an empty string by default, unless you enable
+`throw_on_missing_entry` in the configuration.
 
 ## Resolving individual asset URLs
 
@@ -67,3 +70,4 @@ insert tag.
 MIT.
 
 [pentatrion]: https://github.com/lhapaipai/vite-bundle
+[reference]: https://symfony-vite.pentatrion.com/reference/vite-bundle.html
