@@ -3,12 +3,28 @@
     "description": "Integrates pentatrion/vite-bundle into Contao 5 and exposes Vite entry tags and asset URLs via both Twig functions and insert tags.",
     "type": "contao-bundle",
     "license": "MIT",
+    "keywords": [
+        "contao",
+        "contao-bundle",
+        "vite",
+        "assets"
+    ],
+    "authors": [
+        {
+            "name": "Dennis Bohn",
+            "email": "dennis.bohn@bohnmedia.de"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "contao/core-bundle": "^5.0",
         "contao/manager-plugin": "^2.0",
         "pentatrion/vite-bundle": "^8.0",
-        "symfony/http-kernel": "^6.4 || ^7.0"
+        "symfony/config": "^6.4 || ^7.0",
+        "symfony/dependency-injection": "^6.4 || ^7.0",
+        "symfony/http-kernel": "^6.4 || ^7.0",
+        "symfony/routing": "^6.4 || ^7.0",
+        "symfony/yaml": "^6.4 || ^7.0"
     },
     "autoload": {
         "psr-4": {

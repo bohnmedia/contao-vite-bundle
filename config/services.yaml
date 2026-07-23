@@ -5,3 +5,8 @@ services:
 
     BohnMedia\ContaoViteBundle\InsertTag\:
         resource: '../src/InsertTag/'
+
+    BohnMedia\ContaoViteBundle\Routing\ProxyRouteLoader:
+        arguments:
+            - '%pentatrion_vite.configs%'
+        tags: ['routing.loader']
