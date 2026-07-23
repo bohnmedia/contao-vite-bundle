@@ -86,9 +86,17 @@ pentatrion_vite:
 ```
 
 A dev-server proxy route is registered for each config. To render the tags
-of a config other than the default one, pass its name as the second insert
-tag parameter (this mirrors the `configName` argument of the Twig
-functions):
+of a config other than the default one, pass its name as the `configName`
+argument of the Twig functions or as the second insert tag parameter:
+
+### Twig
+
+```twig
+{{ vite_entry_link_tags('app', [], 'admin') }}
+{{ vite_entry_script_tags('app', [], 'admin') }}
+```
+
+### Insert tag
 
 ```text
 {{vite_entry_link_tags::app::admin}}
