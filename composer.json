@@ -1,6 +1,6 @@
 {
     "name": "bohnmedia/contao-vite-bundle",
-    "description": "Integrates pentatrion/vite-bundle into Contao 5 and exposes Vite entry tags and asset URLs via both Twig functions and insert tags.",
+    "description": "Integrates Vite into Contao 5, based on the Symfony bundle pentatrion/vite-bundle.",
     "type": "contao-bundle",
     "license": "MIT",
     "keywords": [
